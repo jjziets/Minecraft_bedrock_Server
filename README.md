@@ -14,7 +14,7 @@ This project allows you to easily set up and maintain a Minecraft Bedrock server
 1. Clone this repository.
 2. Make sure you have Docker and Docker Compose installed.
 3. Update the `minecraft_bedrock_version` file with the latest Minecraft Bedrock version.
-4. Run the `update-minecraft.sh` script to build and push your Docker image.
+4. Run the `update-minecraft.sh` script to build, push and start your Docker server. 
 5. Run `docker-compose up -d` to start your Minecraft Bedrock servers.
 
 ## Disclaimer
