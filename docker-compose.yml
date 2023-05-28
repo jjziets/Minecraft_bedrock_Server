@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  minecraft-survival:
+    image: jjziets/minecraft-bedrock:latest
+    volumes:
+      - survival-data:/minecraft
+    ports:
+      - 19132:19132/udp
+    environment:
+      - SERVER_PROPERTIES=server-survival.properties
+    restart: always
+    stop_grace_period: 1m
+
+  minecraft-creative:
+    image: jjziets/minecraft-bedrock:latest
+    volumes:
+      - creative-data:/minecraft
+    ports:
+      - 19133:19132/udp
+    environment:
+      - SERVER_PROPERTIES=server-creative.properties
+    restart: always
+    stop_grace_period: 1m
+
+volumes:
+  survival-data:
+  creative-data:

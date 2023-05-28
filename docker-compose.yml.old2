@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  minecraft:
+    image: jjziets/minecraft-bedrock:latest
+    volumes:
+      - /home/vast/mc/server-survival.properties:/minecraft/server.properties
+    ports:
+      - 19132:19132/udp
+    environment:
+      - SERVER_PROPERTIES=server.properties
